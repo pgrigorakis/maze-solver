@@ -1,5 +1,5 @@
-from cell import Cell
 from graphics import Window
+from maze import Maze
 
 BORDER_COLOR = "black"
 
@@ -11,12 +11,5 @@ def main():
 if __name__ == "__main__":
     win = Window(640, 480)
 
-    c1 = Cell(win)
-    c2 = Cell(win)
-
-    c1.draw(10, 10, 60, 60, BORDER_COLOR)
-    c2.draw(70, 70, 120, 120, BORDER_COLOR)
-
-    c1.draw_move(c2, undo=True)
-
+    maze = Maze(10, 10, 20, 20, 50, 50, win)
     win.wait_for_close()
