@@ -11,18 +11,12 @@ def main():
 if __name__ == "__main__":
     win = Window(640, 480)
 
-    cell_full = Cell(win)
-    cell_left = Cell(win)
-    cell_left.has_left_wall = False
-    cell_right = Cell(win)
-    cell_right.has_right_wall = False
-    cell_top = Cell(win)
-    cell_top.has_top_wall = False
-    cell_bottom = Cell(win)
-    cell_bottom.has_bottom_wall = False
-    cell_full.draw(10, 10, 60, 60, BORDER_COLOR)
-    cell_left.draw(10, 70, 60, 120, BORDER_COLOR)
-    cell_right.draw(10, 130, 60, 180, BORDER_COLOR)
-    cell_top.draw(10, 190, 60, 240, BORDER_COLOR)
-    cell_bottom.draw(10, 250, 60, 300, BORDER_COLOR)
+    c1 = Cell(win)
+    c2 = Cell(win)
+
+    c1.draw(10, 10, 60, 60, BORDER_COLOR)
+    c2.draw(70, 70, 120, 120, BORDER_COLOR)
+
+    c1.draw_move(c2, undo=True)
+
     win.wait_for_close()
