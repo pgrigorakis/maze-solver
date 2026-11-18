@@ -37,9 +37,9 @@ class Cell:
             bottom_wall = Line(bottom_left, bottom_right)
             self.__win.draw_line(bottom_wall, fill_color)
 
-    def draw_move(self, to_cell: "Cell", undo: bool = False) -> None:
+    def draw_move(self, to_cell: Cell, undo: bool = False) -> None:
         center_self = Point(
-            abs(self.__x2 + self.__x1) / 2, abs(self.__y2 + self.__y1) / 2
+            abs(self.__x2 + self.__x1) // 2, abs(self.__y2 + self.__y1) // 2
         )
         center_other = Point(
             abs(to_cell.__x2 + to_cell.__x1) / 2, abs(to_cell.__y2 + to_cell.__y1) / 2
