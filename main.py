@@ -1,4 +1,7 @@
-from graphics import Cell, Window
+from cell import Cell
+from graphics import Window
+
+BORDER_COLOR = "black"
 
 
 def main():
@@ -17,9 +20,9 @@ if __name__ == "__main__":
     cell_top.has_top_wall = False
     cell_bottom = Cell(win)
     cell_bottom.has_bottom_wall = False
-    cell_full.draw(10, 10, 60, 60, "red")
-    cell_left.draw(10, 70, 60, 120, "red")
-    cell_right.draw(10, 130, 60, 180, "red")
-    cell_top.draw(10, 190, 60, 240, "red")
-    cell_bottom.draw(10, 250, 60, 300, "red")
+    cell_full.draw(10, 10, 60, 60, BORDER_COLOR)
+    cell_left.draw(10, 70, 60, 120, BORDER_COLOR)
+    cell_right.draw(10, 130, 60, 180, BORDER_COLOR)
+    cell_top.draw(10, 190, 60, 240, BORDER_COLOR)
+    cell_bottom.draw(10, 250, 60, 300, BORDER_COLOR)
     win.wait_for_close()
