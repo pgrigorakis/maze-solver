@@ -11,5 +11,6 @@ def main():
 if __name__ == "__main__":
     win = Window(640, 480)
 
-    maze = Maze(10, 10, 20, 20, 50, 50, win)
+    maze = Maze(10, 10, 10, 10, 50, 50, win)
+    maze.solve()
     win.wait_for_close()
